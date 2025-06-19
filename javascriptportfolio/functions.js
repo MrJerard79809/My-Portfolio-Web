@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //SCROLL DOWN TO ABOUT ME //
 document.addEventListener('DOMContentLoaded', function() {
     // Scroll to About Me
-    document.querySelectorAll('a[href="about"]').forEach(anchor => {
+    document.querySelectorAll('a[href="./about"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const aboutLink = document.querySelector('a[href="about"]');
+    const aboutLink = document.querySelector('a[href="./about"]');
     
     aboutLink.addEventListener('click', function (e) {
         e.preventDefault();
