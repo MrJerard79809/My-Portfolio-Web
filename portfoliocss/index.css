@@ -162,9 +162,8 @@ body {
   height: 1000px;
   width: 100%;
   border: 5px solid orange;
-  box-sizing: border-box;
   margin-top: 0px;
-  padding: 20px;
+
 }
 
 .image {
@@ -223,8 +222,7 @@ body {
   height: auto;
   background-color: #000000b7;
   text-align: center;
-  border: 2px solid orange;
-  padding: 20px;
+  border: 5px solid orange;
   margin-top: 40px;
 }
 
