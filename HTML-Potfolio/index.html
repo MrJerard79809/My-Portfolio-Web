@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="portfoliocss/index.css">
+    <title>Jerard's Portfolio</title>
+    </head>
+    <body>
+            <div class="loader-container">
+                <span class="loader"></span>
+            </div>
+        <header class="header">
+            <div class="logo">Jerard's <span>Profile</span></div>
+            <nav class="navbar">
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+                    <!-- Menu for mobile viewers-->
+                    <ul class="menu" id="menu">
+                        <a href="./index.html">Home</a>
+                        <a href="about">About</a>
+                        <a href="Contacct Us/ContactUs.html">Contact</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="Resume Files/Avila Resume.pdf" target="_blank">Curriculum Vitae</a>
+                    </ul>
+                    <!-- Menu for Desktop -->
+                    <ul class="menu2" id="mobileview">
+                        <a href="./index.html">Home</a>
+                        <a href="about">About</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="Resume.html">Curriculum</a>
+                 <!--   <a href="Resume/Curriculum Vitea.html">Curriculum Vitea</a>  -->
+                    </ul>  
+            </nav>
+        </header>
+                
+        <section id="home" class="home-content">
+             <div class="image">
+                <img src="images/LogIn.webp" alt="">
+            </div>
+            <div class="content">
+                <h3>Hi I'm <span>Jerard Marco Avila</span></h3>
+                <h2>Newbie Web Designer and Network Engineer</h2>
+                <p>I am an IT student with strong curiosity to create 
+                   something new and proper communication skills and likes to 
+                   Learn more about the industry of Information Communication Technology.
+                </p>
+            </div>
+        </section>
+            <div class="aboutcontent" id="about.html">
+                <h1>About Me</h1>
+                <img src="images/aboutme.jpg" alt="">
+                <p>Hello! I'm Jeard Avila my profession is Web Design and Network Engineer as a student 
+                    I am pursuing my degree in Batchelor of Science in Information Technology at STI Collage Global City 
+                    to deliver my skills as a professional IT Web Designer. </p>
+            </div>
+            <div class="ScrTop">
+                <button id="backToTopBtn">
+                  <img src="images/upward-arrow.png" alt="Back to Top" class="icon">
+                  Back to Top
+                </button>
+              </div>
+        <footer class="footer">
+            <p>&copy; Jerard's Portfolio. All rights reserved 2024.</p>
+        </footer>
+        <script src="javascriptportfolio/functions.js"></script>
+         <script> 
+            function toggleMenu() {
+                const menu = document.getElementById('menu');
+                menu.classList.toggle('active');
+            }
+        </script>
+    </body>
+ </html>
