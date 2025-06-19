@@ -1,0 +1,125 @@
+body{
+    background-color: gray;
+    cursor: default;
+}
+
+.ResumeElements{
+    height: 200vh;
+    width: 80%;
+    margin: 5% 35% 5% 10% ;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+}
+
+.info{
+    width: 45%;
+    height: 40vh;
+    width: 35%;
+}
+
+.info h1{
+    text-align: left;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.info h2 h3{
+    font-size: 25px;
+    font-weight: 500;
+    width: 100%;
+}
+.resumephoto {
+    margin-top: 2%;
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    height: 40vh;
+    width: 50%;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.resumephoto img {
+    width: fit-content; /* Adjust the width as needed */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make it a circular image */
+    object-fit: cover;
+}
+
+.info p {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 15%;
+}
+
+.Home{
+    background-color: rgb(15, 0, 0);
+    font-family: Arial, sans-serif;
+    position: fixed;
+    font-size: 40px;
+    height: 50px;
+    width: 100px;
+    padding: 15px 50px 10px 20px;
+}
+
+.Home a {
+    text-decoration: none;
+    color: #ffffff; /* Set your desired text color */
+    font-weight: bold;
+    font-size: 40px;
+   
+}
+
+.Home:hover {
+    background-color: #14d0ff; /* Set your desired text color on hover */
+    padding: 15px 50px 10px 20px;
+}
+
+.info img{
+    height: 50px;
+}
+
+.info .mobile p{
+    font-size: 25px;
+    background-color: transparent;
+    color: black;
+    margin-left: 2%;
+    margin-top: -08%;
+    font-weight: 800;
+}
+
+.email img {
+    height: 45px;
+    vertical-align: middle; /* Aligns the image vertically in relation to adjacent inline elements */
+}
+
+.email a {
+    font-size: 25px;
+    background-color: transparent;
+    color: black;
+    font-weight: 800;
+    margin-top: 0; /* Remove the % sign */
+    margin-left: 2.5%;
+    display: inline-block; /* Ensures that the anchor behaves like an inline block element */
+    vertical-align: middle; /* Aligns the text vertically in relation to adjacent inline elements */
+}
+.facebook img {
+    height: 45px;
+    margin-top: 3%;
+    vertical-align: middle; /* Aligns the image vertically in relation to adjacent inline elements */
+}
+
+.facebook a {
+    font-size: 25px;
+    background-color: transparent;
+    color: black;
+    font-weight: 800;
+    margin-top: 50px; /* Add the unit (e.g., px) and adjust as needed */
+    margin-left: 2.5%;
+    display: inline-block; /* Ensures that the anchor behaves like an inline block element */
+    vertical-align: middle; /* Aligns the text vertically in relation to adjacent inline elements */
+}
+
