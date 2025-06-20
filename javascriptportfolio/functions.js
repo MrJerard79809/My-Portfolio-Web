@@ -114,3 +114,36 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+    // Contact Us Funtion 
+    function openContactModal() {
+      document.getElementById('contactModal').style.display = 'block';
+      document.getElementById('modalOverlay').style.display = 'block';
+    }
+
+    function closeContactModal() {
+      document.getElementById('contactModal').style.display = 'none';
+      document.getElementById('modalOverlay').style.display = 'none';
+    }
+
+    //Clear the Text Fiels when sent
+    function submitForm(e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        alert("Thank You message was sent Successfully!");
+        form.reset(); // Clear all fields
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    }).catch(error => {
+      alert("Oops! Network error.");
+    });
+  }

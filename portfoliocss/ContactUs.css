@@ -1,4 +1,3 @@
-/* index.css */
 
 /* Loader styles */
 .loader-container {
@@ -44,16 +43,15 @@
     left: 0;
     transform: translateX(-100%);
   }
+
   100% {
     left: 100%;
     transform: translateX(0%);
   }
 }
 
-/* Hide content until loader finishes */
-.content {
-  display: none;
-}
+
+
 
 /* Reset and base styles */
 body, h1, h2, h3, p, ul, li {
@@ -119,27 +117,24 @@ body {
 .menu2 {
   display: flex;
   gap: 0px;
-  background-color: transparent;
   border: 1.5px solid #ff9900;
   border-radius: 5px;
-  padding: 0 10px;
-  align-items: center;
-  justify-content: center;
+  background-color: transparent;
 }
 
 .menu2 li {
   display: inline-block;
 }
 
-.menu2 a {
+.menu a, .menu2 a {
   text-decoration: none;
   color: #fff;
   padding: 1rem;
-  display: block;
   text-align: center;
+  display: block;
 }
 
-.menu2 a:hover {
+.menu a:hover, .menu2 a:hover {
   background-color: orange;
 }
 
@@ -151,161 +146,38 @@ body {
   padding: 5px;
 }
 
-/* HOME CONTENT SECTION */
-.home-content {
-  background-color: #000000b7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 1000px;
-  width: 100%;
-  border: 5px solid orange;
-  box-sizing: border-box;
-  margin-top: 0px;
-  padding: 20px;
-}
-
-.image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 30px;
-  border: 3px solid #ff9900;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.content h3 {
-  font-size: 32px;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.content h3 span {
-  color: #ff9900;
-}
-
-.content h2 {
-  font-size: 25px;
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.content p {
-  font-size: 20px;
-  color: white;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* ABOUT SECTION */
-.aboutcontent {
-  width: 97.3%;
-  height: auto;
-  background-color: #000000b7;
-  text-align: center;
-  border: 5px solid orange;
-  padding: 40px 20px;
-  margin-top: 40px;
-}
-
-.aboutcontent h1 {
-  font-size: 45px;
-  font-weight: 800;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.aboutcontent img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 3px solid limegreen;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.aboutcontent p {
-  color: white;
-  font-size: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-/* Scroll To Top Button */
-.ScrTop button {
-  position: fixed;
-  background-color: #03ff74;
-  border: none;
-  cursor: pointer;
-  font-size: 0;
-  border-radius: 5px;
-  height: 50px;
-  width: 50px;
-  bottom: 7%;
-  right: 5%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  transition: width 0.3s ease;
-}
-
-.ScrTop button:hover {
-  width: 175px;
-  font-size: 20px;
-}
-
-.ScrTop .icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-
 /* Footer */
 .footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 15px 20px;
   width: 100%;
   border-top: 3px solid orange;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  font-size: 14px;
 }
 
-/* Scrollbar */
+/* Optional: smooth scrolling and scrollbar */
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+
 ::-webkit-scrollbar-track {
   background-color: #000;
-}
-html {
-  scrollbar-color: transparent transparent;
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
 }
 
 
@@ -316,7 +188,7 @@ html {
   flex-direction: column;
   position: absolute;
   top: 30px;
-  right: 30px; /* keep the menu aligned with the hamburger icon */
+  right: 20px; /* keep the menu aligned with the hamburger icon */
   background-color: #000000ee;
   border: 2px solid orange;
   border-radius: 5px;
@@ -376,5 +248,105 @@ html {
 
   .menu2 {
     display: none !important; /* hide desktop menu on small screens if present */
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container {
+  background-color: #000; /* Black background */
+  border: 3.5px solid lawngreen;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: #fff; /* Text inside the container becomes white */
+}
+
+.form-container h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  color: #fff; /* Heading white */
+}
+
+.form-container p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #ddd; /* Slightly lighter white for paragraph */
+}
+
+form input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+  color: #000; /* Keep input text color black */
+  background-color: #fff;
+}
+
+form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+  padding: 6px;
+  resize: none;
+  color: #000; /* Keep textarea text black */
+  background-color: #fff;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  background-color: #ff0000; /* Red button */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 25px;
+  }
+
+  .form-container h1 {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 16px;
   }
 }

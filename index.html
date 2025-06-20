@@ -19,7 +19,7 @@
                     <ul class="menu" id="menu">
                         <a href="./index.html">Home</a>
                         <a href="./about">About</a>
-                        <a href="#Contacct Us/ContactUs.html">Contact</a>
+                        <a href="./ContactUs.html">Contact</a>
                         <a href="#portfolio">Portfolio</a>
                         <a href="./Resume Files/Avila Resume.pdf" target="_blank">Curriculum Vitae</a>
                     </ul>
@@ -27,7 +27,7 @@
                     <ul class="menu2" id="mob./leview">
                         <a href="./index.html">Home</a>
                         <a href="./about">About</a>
-                        <a href="#contact">Contact</a>
+                        <a href="#!" onclick="openContactModal()">Contact</a>
                         <a href="#portfolio">Portfolio</a>
                         <a href="./Resume.html">Curriculum</a>
                     </ul>  
@@ -40,7 +40,7 @@
             </div>
             <div class="content">
                 <h3>Hi I'm <span>Jerard Marco Avila</span></h3>
-                <h2>Newbie Web Designer and Network Engineer</h2>
+                <h2>Web Designer, Graphics Designer and Network Engineer</h2>
                 <p>I am an IT student with strong curiosity to create 
                    something new and proper communication skills and likes to 
                    Learn more about the industry of Information Communication Technology.
@@ -54,6 +54,47 @@
                     I am pursuing my degree in Batchelor of Science in Information Technology at STI Collage Global City 
                     to deliver my skills as a professional IT Web Designer. </p>
             </div>
+
+            <!-- Contact Modal -->
+            <div id="contactModal" style="
+                    display: none;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: black;
+                    border-radius: 16px;
+                    width: 95%;
+                    max-width: 600px;
+                    height: 500px;
+                    z-index: 1000;
+                    box-shadow: 0 0 15px limegreen;
+                    overflow: hidden;
+                    ">
+                    <span onclick="closeContactModal()" style="
+                    position: absolute;
+                    background-color: aliceblue;
+                    top: 10px;
+                    right: 16px;
+                    font-size: 28px;
+                    color: rgb(255, 0, 0);
+                    cursor: pointer;
+                    z-index: 1001;
+                    ">&times;</span>
+                        <iframe src="Contact.html" style="width:100%; height:100%; border:none;"></iframe>
+            </div>
+
+            <!-- Optional overlay -->
+            <div id="modalOverlay" onclick="closeContactModal()" style="
+                    display: none;
+                    position: fixed;
+                    top: 0; left: 0;
+                    width: 100vw; height: 100vh;
+                    background: rgba(0, 0, 0, 0.6);
+                    z-index: 999;
+                    "></div>
+
+
             <div class="ScrTop">
                 <button id="backToTopBtn">
                   <img src="images/upward-arrow.png" alt="Back to Top" class="icon">
@@ -70,5 +111,6 @@
                 menu.classList.toggle('active');
             }
         </script>
+
     </body>
  </html>

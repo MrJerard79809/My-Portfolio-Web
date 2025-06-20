@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="portfoliocss/Contact.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="loader-container">
+        <span class="loader"></span>
+    </div>
+
+    <div class="form-container">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you. Please fill out the form below.</p>
+                <form action="https://formspree.io/f/mnnvbjlv" method="POST" onsubmit="submitForm(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+        </div>
+
+        <script src="javascriptportfolio/functions.js"></script>
+</body>
+</html>

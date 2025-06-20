@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="portfoliocss/ContactUs.css">
+    <title>Contact Me</title>
+</head>
+<body>
+       <div class="loader-container">
+                <span class="loader"></span>
+            </div>
+        <header class="header">
+            <div class="logo">Jerard's <span>Profile</span></div>
+            <nav class="navbar">
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+                    <!-- Menu for mobile viewers-->
+                    <ul class="menu" id="menu">
+                        <a href="./index.html">Home</a>
+                        <a href="./about">About</a>
+                        <a href="./Contacct Us/ContactUs.html">Contact</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="./Resume Files/Avila Resume.pdf" target="_blank">Curriculum Vitae</a>
+                    </ul>
+                    <!-- Menu for Desktop -->
+                    <ul class="menu2" id="mob./leview">
+                        <a href="./index.html">Home</a>
+                        <a href="./about">About</a>
+                        <a href="./Contacct Us/ContactUs.html">Contact</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="./Resume.html">Curriculum</a>
+                    </ul>  
+            </nav>
+        </header>
+            
+        <div class="form-container">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you. Please fill out the form below.</p>
+                <form action="https://formspree.io/f/mnnvbjlv" method="POST" onsubmit="submitForm(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+        </div>
+
+
+         <footer class="footer">
+            <p>&copy; Jerard's Portfolio. All rights reserved 2024.</p>
+        </footer>
+        <script src="javascriptportfolio/functions.js"></script>
+         <script> 
+            function toggleMenu() {
+                const menu = document.getElementById('menu');
+                menu.classList.toggle('active');
+            }
+        </script>
+    
+</body>
+</html>
