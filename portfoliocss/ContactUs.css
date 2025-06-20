@@ -128,7 +128,7 @@ a {
   top: 0;
   z-index: 999;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -184,12 +184,12 @@ a {
   display: none;
   cursor: pointer;
   font-size: 2rem;
-  padding: 5px;
+  padding: 2px;
   position: absolute;
-  right: 20px;
+  right: 2px;
   z-index: 1001;
   border: 2px solid #00ff15;
-  border-radius: 6px;
+  border-radius: 5px;
   background-color: transparent;
   color: white;
 }
@@ -205,8 +205,7 @@ a {
   flex-direction: column;
   position: absolute;
   top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 10px;
   background-color: #000000ee;
   border: 2px solid orange;
   border-radius: 5px;
@@ -316,11 +315,17 @@ button:hover {
   }
 
   .navbar {
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .menu2 {
     display: none !important;
+  }
+
+  .menu {
+    right: -20px;
+    transform: none;
+    top:27.5px;
   }
 }
 
