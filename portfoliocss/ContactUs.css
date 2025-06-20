@@ -1,3 +1,4 @@
+/* index.css */
 
 /* Loader styles */
 .loader-container {
@@ -50,9 +51,6 @@
   }
 }
 
-
-
-
 /* Reset and base styles */
 body, h1, h2, h3, p, ul, li {
   margin: 0;
@@ -61,10 +59,49 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-   font-family: 'Arial', sans-serif;
+  font-family: 'Arial', sans-serif;
   background: rgb(5, 42, 255) url("../images/programpic.jpg") no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  word-break: break-word;
 }
 
 /* Logo */
@@ -91,7 +128,7 @@ body {
   top: 0;
   z-index: 999;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -106,6 +143,7 @@ body {
   justify-content: center;
   align-items: center;
   flex: 1;
+  position: relative;
 }
 
 /* Menu */
@@ -120,21 +158,24 @@ body {
   border: 1.5px solid #ff9900;
   border-radius: 5px;
   background-color: transparent;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu2 li {
   display: inline-block;
 }
 
-.menu a, .menu2 a {
+.menu2 a {
   text-decoration: none;
   color: #fff;
   padding: 1rem;
-  text-align: center;
   display: block;
+  text-align: center;
 }
 
-.menu a:hover, .menu2 a:hover {
+.menu2 a:hover {
   background-color: orange;
 }
 
@@ -142,44 +183,20 @@ body {
 .menu-icon {
   display: none;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 5px;
-}
-
-/* Footer */
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 15px 20px;
-  width: 100%;
-  border-top: 3px solid orange;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 998;
-  font-size: 14px;
-}
-
-/* Optional: smooth scrolling and scrollbar */
-html {
-  scroll-behavior: smooth;
-  scrollbar-color: transparent transparent;
-  scrollbar-width: thin;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
+  position: absolute;
+  right: 20px;
+  z-index: 1001;
+  border: 2px solid #00ff15;
+  border-radius: 6px;
   background-color: transparent;
+  color: white;
 }
 
-::-webkit-scrollbar-track {
-  background-color: #000;
+.menu-icon:hover {
+  background-color: #00ff1533;
 }
-
 
 /* Base .menu hidden */
 .menu {
@@ -187,8 +204,9 @@ html {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 30px;
-  right: 30px; 
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #000000ee;
   border: 2px solid orange;
   border-radius: 5px;
@@ -212,62 +230,28 @@ html {
   background-color: orange;
 }
 
-/* Show .menu when active */
 .menu.active {
   display: flex;
 }
 
-/* Hamburger Icon */
-.menu-icon {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  padding: 3px;
-  position: absolute;
-  right: 40px;
-  z-index: 1001;
-  border: 2px solid #00ff15; /* Light green border */
-  border-radius: 6px;         /* Rounded corners */
-  background-color: transparent;
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  width: 100%;
+  border-top: 3px solid orange;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  font-size: 14px;
 }
 
-.menu-icon:hover {
-  background-color: #00ff1533; /* Light green tint on hover */
-}
-
-/* Show only on small screens */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .navbar {
-    position: relative;
-  }
-
-  .menu2 {
-    display: none !important; /* hide desktop menu on small screens if present */
-  }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* FORM CONTAINER */
 .form-container {
-  background-color: #000; /* Black background */
+  background-color: #000;
   border: 3.5px solid lawngreen;
   border-radius: 16px;
   padding: 40px;
@@ -275,33 +259,22 @@ body {
   max-width: 600px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
-  color: #fff; /* Text inside the container becomes white */
+  color: #fff;
 }
 
 .form-container h1 {
   margin-bottom: 10px;
   font-size: 32px;
-  color: #fff; /* Heading white */
+  color: #fff;
 }
 
 .form-container p {
   margin-bottom: 30px;
   font-size: 16px;
-  color: #ddd; /* Slightly lighter white for paragraph */
+  color: #ddd;
 }
 
-form input {
-  width: 100%;
-  padding: 16px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  font-size: 16px;
-  transition: border 0.3s ease;
-  color: #000; /* Keep input text color black */
-  background-color: #fff;
-}
-
+form input,
 form textarea {
   width: 100%;
   margin-bottom: 20px;
@@ -309,10 +282,10 @@ form textarea {
   border-radius: 10px;
   font-size: 16px;
   transition: border 0.3s ease;
-  padding: 6px;
-  resize: none;
-  color: #000; /* Keep textarea text black */
+  padding: 16px;
   background-color: #fff;
+  color: #000;
+  resize: none;
 }
 
 form input:focus,
@@ -325,7 +298,7 @@ button {
   width: 100%;
   padding: 16px;
   font-size: 18px;
-  background-color: #ff0000; /* Red button */
+  background-color: #ff0000;
   color: #ffffff;
   border: none;
   border-radius: 10px;
@@ -334,7 +307,21 @@ button {
 }
 
 button:hover {
-  background-color: #cc0000; /* Darker red on hover */
+  background-color: #cc0000;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .menu2 {
+    display: none !important;
+  }
 }
 
 @media (max-width: 600px) {
