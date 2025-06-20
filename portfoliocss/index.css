@@ -63,10 +63,27 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-   font-family: 'Arial', sans-serif;
+  font-family: 'Arial', sans-serif;
   background: rgb(5, 42, 255) url("../images/programpic.jpg") no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+html {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  word-break: break-word;
 }
 
 /* Logo */
@@ -219,13 +236,14 @@ body {
 
 /* ABOUT SECTION */
 .aboutcontent {
-  width: 97.3%;
+  width: 100%;
   height: auto;
   background-color: #000000b7;
   text-align: center;
   border: 5px solid orange;
   padding: 40px 20px;
   margin-top: 40px;
+  box-sizing: border-box;
 }
 
 .aboutcontent h1 {
@@ -302,12 +320,6 @@ body {
 ::-webkit-scrollbar-track {
   background-color: #000;
 }
-html {
-  scrollbar-color: transparent transparent;
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
-}
-
 
 /* Base .menu hidden */
 .menu {
@@ -316,7 +328,7 @@ html {
   flex-direction: column;
   position: absolute;
   top: 30px;
-  right: 30px; /* keep the menu aligned with the hamburger icon */
+  right: 30px;
   background-color: #000000ee;
   border: 2px solid orange;
   border-radius: 5px;
@@ -355,13 +367,13 @@ html {
   position: absolute;
   right: 40px;
   z-index: 1001;
-  border: 2px solid #00ff15; /* Light green border */
-  border-radius: 6px;         /* Rounded corners */
+  border: 2px solid #00ff15;
+  border-radius: 6px;
   background-color: transparent;
 }
 
 .menu-icon:hover {
-  background-color: #00ff1533; /* Light green tint on hover */
+  background-color: #00ff1533;
 }
 
 /* Show only on small screens */
@@ -375,6 +387,29 @@ html {
   }
 
   .menu2 {
-    display: none !important; /* hide desktop menu on small screens if present */
+    display: none !important;
+  }
+
+  .home-content .content h3 {
+    font-size: 24px;
+  }
+
+  .home-content .content h2 {
+    font-size: 20px;
+  }
+
+  .aboutcontent h1 {
+    font-size: 30px;
+  }
+
+  .aboutcontent p,
+  .home-content .content p {
+    font-size: 18px;
+  }
+
+  .image,
+  .aboutcontent img {
+    width: 150px;
+    height: 150px;
   }
 }
