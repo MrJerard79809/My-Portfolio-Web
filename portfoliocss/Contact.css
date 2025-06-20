@@ -150,3 +150,20 @@ button:hover {
     font-size: 16px;
   }
 }
+
+  #popup {
+      display: none;
+      background: #4CAF50;
+      color: white;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }

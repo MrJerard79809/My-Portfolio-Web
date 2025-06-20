@@ -15,13 +15,16 @@
     <div class="form-container">
             <h1>Contact Us</h1>
             <p>We’d love to hear from you. Please fill out the form below.</p>
-                <form action="https://formspree.io/f/mnnvbjlv" method="POST" onsubmit="submitForm(event)">
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
         </div>
+
+        <div id="popup">✅ Message sent successfully!</div>
 
         <script src="javascriptportfolio/functions.js"></script>
 </body>

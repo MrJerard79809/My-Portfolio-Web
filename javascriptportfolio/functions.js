@@ -126,24 +126,27 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('modalOverlay').style.display = 'none';
     }
 
-    //Clear the Text Fiels when sent
+      // Clear the text fields when sent
     function submitForm(e) {
-    e.preventDefault();
+      e.preventDefault();
 
-    const form = e.target;
+      const form = e.target;
+      const popup = document.getElementById("popup");
 
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        alert("Thank You message was sent Successfully!");
-        form.reset(); // Clear all fields
-      } else {
-        alert("Oops! Something went wrong.");
-      }
-    }).catch(error => {
-      alert("Oops! Network error.");
-    });
-  }
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+      .then(response => {
+        if (response.ok) {
+          popup.style.display = "block";
+          form.reset();
+        } else {
+          alert("Oops! Something went wrong.");
+        }
+      })
+      .catch(error => {
+        alert("Oops! Network error.");
+      });
+    }

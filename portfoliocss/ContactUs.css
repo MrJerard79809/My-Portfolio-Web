@@ -204,8 +204,8 @@ a {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 60px;
-  right: 10px;
+  top: 30px;
+  right: 30px;
   background-color: #000000ee;
   border: 2px solid orange;
   border-radius: 5px;
